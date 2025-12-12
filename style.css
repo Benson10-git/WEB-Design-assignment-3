@@ -1,0 +1,497 @@
+/* =======================================
+   1. GLOBAL STYLES & VARIABLES
+   ======================================= */
+
+/* --- COLORS (SIERRA LEONE FLAG) --- */
+:root {
+  --blue: #1b75e5; /* Primary Brighter Blue */
+  --green: #2baa26; /* Secondary Green */
+  --white: #ffffff;
+  --dark: #1a1a1a;
+  --light-gray: #f2f2f2;
+  --text-dark: #333;
+}
+
+/* --- RESET --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: var(--light-gray); /* Use light-gray for main background */
+  color: var(--dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =======================================
+   2. HEADER/TOPBAR STYLES
+   ======================================= */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  color: var(--white);
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: var(--green);
+}
+
+.nav a.active {
+  color: var(--green);
+  border-bottom: 2px solid var(--green);
+}
+
+.search {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  width: 250px;
+}
+
+/* =======================================
+   3. PLAYERS PAGE STYLES (ROSTER)
+   ======================================= */
+.roster-container {
+  max-width: 1200px;
+  margin: 80px auto; 
+  padding: 0 20px;
+}
+
+.roster-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: var(--blue);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  border-bottom: 3px solid var(--green);
+  display: block;
+  padding-bottom: 5px;
+}
+
+.player-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: grid;
+  gap: 30px;
+}
+
+.player-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding-bottom: 20px; 
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.player-number {
+    position: relative; 
+    overflow: hidden;
+    height: 360px;
+}
+
+.player-number img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.jersey-number {
+    position: absolute;
+    top: 15px; 
+    left: 15px; 
+    z-index: 10; 
+    width: 65px; 
+    height: 65px; 
+    background: var(--blue); 
+    color: var(--white); 
+    border: 4px solid var(--green); 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em; 
+    font-weight: bold; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); 
+}
+
+.player-info {
+  padding: 0 15px;
+}
+
+.player-name {
+  font-size: 1.4em;
+  color: var(--dark);
+  margin-top: 15px; 
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.player-role {
+  font-size: 1em; 
+  color: #666;
+  margin-top: 5px;
+}
+
+
+/* =======================================
+   4. FIXTURES PAGE STYLES (MATCHES.HTML)
+   ======================================= */
+.fixtures-container {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.fixtures-container h1 {
+    font-size: 2.5em;
+    color: var(--dark);
+    margin-bottom: 40px;
+}
+
+.match-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.match-card {
+    /* *** CORE GRID LAYOUT: 3 COLUMNS *** */
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1fr; 
+    align-items: stretch; 
+    
+    padding: 30px 0;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.team-section img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.team-name-big {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--dark);
+    margin-top: 5px;
+}
+
+/* --- Left Column Alignment --- */
+.team-section.left {
+    align-items: flex-start; /* Aligns contents (img, p) to the left */
+    padding-left: 40px;
+    justify-self: start;
+}
+.team-section.left .team-name-big {
+    text-align: left;
+}
+
+
+/* --- Right Column Alignment --- */
+.team-section.right {
+    align-items: flex-end; /* Aligns contents (img, p) to the right */
+    padding-right: 40px;
+    justify-self: end;
+}
+.team-section.right .team-name-big {
+    text-align: right;
+}
+
+/* --- Center Column (Details) --- */
+.match-details-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px 10px;
+    border-left: 2px solid var(--light-gray); 
+    border-right: 2px solid var(--light-gray);
+    text-align: center; /* Ensure all center content is centered */
+}
+
+.matchup-vs {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+.league-tag {
+    background-color: var(--green);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.details-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+    color: #444;
+}
+
+.detail-item strong {
+    color: var(--dark);
+    font-weight: 700;
+    display: block;
+    margin-top: 5px;
+}
+
+
+/* =======================================
+   5. SPONSORS SECTION STYLES
+   ======================================= */
+.sponsors-section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding-top: 40px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sponsors-title {
+    font-size: 1.8em;
+    color: var(--dark);
+    margin-bottom: 30px;
+}
+
+.sponsors-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    min-height: 100px;
+}
+
+.sponsor-logo {
+    width: 150px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsor-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.sponsor-logo.placeholder {
+    line-height: 60px;
+    border: 2px dashed #999;
+    background-color: var(--light-gray);
+    color: #666;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* =======================================
+   6. FOOTER STYLES
+   ======================================= */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 60px;
+  background: var(--blue);
+  color: var(--white);
+}
+
+.footer-left h2 {
+  margin-bottom: 12px;
+}
+
+.address {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.socials {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.socials span {
+  background: var(--white);
+  color: var(--blue);
+  padding: 6px 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 12px;
+  transition: background 0.25s;
+}
+
+.socials span:hover {
+    background: var(--green);
+    color: var(--white);
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-links a {
+  display: block;
+  color: var(--white);
+  opacity: 0.85;
+  margin-bottom: 12px;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--green);
+}
+
+.footer-bottom {
+  background: #0f54a7; /* Slightly darker shade of the blue */
+  color: var(--white);
+  padding: 14px;
+  text-align: center;
+  font-size: 13px;
+}
+
+
+/* =======================================
+   7. RESPONSIVE / MEDIA QUERIES
+   ======================================= */
+@media (max-width: 880px) {
+    /* Header/Footer adjustments */
+    .topbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    .nav { display: none; } 
+    .search { width: 100%; }
+
+    .footer { 
+        flex-direction: column; 
+        gap: 30px; 
+        padding: 40px 20px;
+    }
+    .footer-left {
+        text-align: center;
+    }
+    .socials {
+        justify-content: center;
+    }
+    .footer-links { 
+        flex-direction: column; 
+        gap: 20px; 
+        align-items: center;
+    }
+
+    /* Player Page adjustments */
+    .player-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Fixtures Page adjustments */
+    .match-card {
+        grid-template-columns: 1fr; /* Stack vertically on small screens */
+        padding: 25px 0; 
+    }
+    .team-section {
+        align-items: center !important; 
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        margin-bottom: 15px;
+    }
+    .team-section.left { order: 0; }
+    .team-section.right { order: 2; }
+    .team-section.left .team-name-big,
+    .team-section.right .team-name-big {
+        text-align: center !important;
+    }
+
+    .match-details-center {
+        order: 1;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid var(--light-gray);
+        border-bottom: 1px solid var(--light-gray);
+        padding: 20px 0;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 600px) {
+    .player-grid {
+        grid-template-columns: 1fr; 
+    }
+    .roster-title {
+        font-size: 2em;
+    }
+    .jersey-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3em;
+    }
+}

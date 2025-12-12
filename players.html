@@ -3,169 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Players - Team Roster</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>SLFA - Players Roster</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-       <nav>
-            <a href="./index.html">HOME</a>
-            <a href="./fixtures.html">FIXTURES</a>
-            <a href="./players.html" class="active">PLAYERS</a> <a href="contact.html">CONTACT</a>
-        </nav>
-        <div class="about-us-btn">
-            <a href="#">ABOUT US</a>
-        </div>
-    </header>
+  <header class="topbar">
+    <a href="./index.html" class="brand">SLFA</a>
 
-    <main class="content">
-        <h1>PLAYERS</h1>
+    <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./players.html" class="active">Players</a>
+        <a href="#">Gallery</a>
+        <a href="./fixtures.html">Matches</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </nav>
+    <input type="search" class="search" placeholder="Search…">
+</header>
 
-        <div class="players-grid">
+    <main class="roster-container">
+        <h1 class="roster-title">TEAM ROSTER</h1>
 
-            <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/goalkeeper abubakarr kamara.png" alt="Player Name 1" class="player-photo">
-                    <span class="player-number">22</span>
-                </div>
-                <div class="player-info">
-                    <span class="player-name-small">Aboubakarr</span>
-                    <span class="player-name-large">Kamara</span>
-                    <span class="player-position">Goalkeeper</span>
-                </div>
-            </div>
+        <section class="player-grid">
 
             <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/Goal keeper Mohamed Kamara.png" alt="Player Name 2" class="player-photo">
-                    <span class="player-number">1</span>
-                    </div>
+                <div class="player-number">
+                    <img src="images/Goal keeper Mohamed Kamara.png" alt="Mohamed Kamara">
+                    <span class="jersey-number">1</span> 
+                </div>
                 <div class="player-info">
-                    <span class="player-name-small">Mohamed</span>
-                    <span class="player-name-large">Kamara</span>
-                    <span class="player-position">Goalkeeper</span>
+                    <h3 class="player-name">Mohamed Kamara</h3>
+                    <p class="player-role">Goalkeeper</p>
                 </div>
             </div>
 
             <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/mamoudou jalloh.png" alt="Player Name 3" class="player-photo">
-                    <span class="player-number">31</span>
+                <div class="player-number">
+                    <img src="images/mamoudou jalloh.png" alt="">
+                    <span class="jersey-number">24</span> 
                 </div>
                 <div class="player-info">
-                    <span class="player-name-small">Polscheoder</span>
-                    <span class="player-name-large">Player</span>
-                    <span class="player-position">Position</span>
+                    <h3 class="player-name">Mamoudou Jalloh</h3>
+                    <p class="player-role">Goalkeeper</p>
                 </div>
             </div>
 
             <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/Defender Emmanuel Samadia.png" alt="Player Name 4" class="player-photo">
-                     <span class="player-number">4</span>
+                <div class="player-number">
+                    <img src="images/goalkeeper abubakarr kamara.png" alt="Kei Kamara">
+                    <span class="jersey-number">31</span> 
                 </div>
                 <div class="player-info">
-                    <span class="player-name-small">Emmanuel</span>
-                    <span class="player-name-large">Samadia</span>
-                    <span class="player-position">Defender</span>
-                </div>
-            </div>
-            <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/benson.png" alt="Player Name 5" class="player-photo">
-                    <span class="player-number">14</span>
-                </div>
-                <div class="player-info">
-                    <span class="player-name-small">Peter</span>
-                    <span class="player-name-large">Benson</span>
-                    <span class="player-position">Right-Winger</span>
-                </div>
-            </div>
-            <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/defender steven caulker .png" alt="Player Name 6" class="player-photo">
-                    <span class="player-number">5</span>
-                </div>
-                <div class="player-info">
-                    <span class="player-name-small">Steven</span>
-                    <span class="player-name-large">Caulker</span>
-                    <span class="player-position">Central-Back</span>
-                </div>
-            </div>
-            <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/zangaylay.png" alt="Player Name 7" class="player-photo">
-                    <span class="player-number">15</span>
-                </div>
-                <div class="player-info">
-                    <span class="player-name-small">Umaru</span>
-                    <span class="player-name-large">Kamara(Zangaylay)</span>
-                    <span class="player-position">Defender</span>
-                </div>
-            </div>
-            <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/alhassan koro.png" alt="Player Name 8" class="player-photo">
-                    <span class="player-number">8</span>
-                </div>
-                <div class="player-info">
-                    <span class="player-name-small">Alhassan</span>
-                    <span class="player-name-large">Koroma</span>
-                    <span class="player-position">Attacking-Midfielder</span>
-                </div>
-            </div>
-            <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/kei-kamara.png" alt="Player Name 9" class="player-photo">
-                    <span class="player-number">9</span>
-                </div>
-                <div class="player-info">
-                    <span class="player-name-small">Kei</span>
-                    <span class="player-name-large">Kamara</span>
-                    <span class="player-position">Striker</span>
-                </div>
-            </div>
-            <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/Mohamed Buya Kamara.png" alt="Player Name 10" class="player-photo">
-                    <span class="player-number">28</span>
-                </div>
-                <div class="player-info">
-                    <span class="player-name-small">Buya</span>
-                    <span class="player-name-large">Kamara</span>
-                    <span class="player-position">Winger</span>
-                </div>
-            </div>
-            <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/musa noah kamara.png" alt="Player Name 11" class="player-photo">
-                    <span class="player-number">28</span>
-                </div>
-                <div class="player-info">
-                    <span class="player-name-small">Musa Noah</span>
-                    <span class="player-name-large">Kamara(Musa Tombo)</span>
-                    <span class="player-position">Soul-Striker</span>
-                </div>
-            </div>
-            <div class="player-card">
-                <div class="player-image-container">
-                    <img src="images/henry.png" alt="Player Name 12" class="player-photo">
-                    <span class="player-number">28</span>
-                </div>
-                <div class="player-info">
-                    <span class="player-name-small">Henry</span>
-                    <span class="player-name-large">Okendu</span>
-                    <span class="player-position">Left-Back</span>
+                    <h3 class="player-name">Abubakarr Kamara</h3>
+                    <p class="player-role">Goalkeeper</p>
                 </div>
             </div>
 
-        </div>
+            <div class="player-card">
+                <div class="player-number">
+                    <img src="images/defender steven caulker .png" alt="Steven Caulker">
+                    <span class="jersey-number">4</span> 
+                </div>
+                <div class="player-info">
+                    <h3 class="player-name">Steven Caulker</h3>
+                    <p class="player-role">Defender</p>
+                </div>
+            </div>
+
+            <div class="player-card">
+                <div class="player-number">
+                    <img src="images/Defender Emmanuel Samadia.png" alt="Emmanuel Samadia">
+                    <span class="jersey-number">2</span> 
+                </div>
+                <div class="player-info">
+                    <h3 class="player-name">Emmanuel Samadia</h3>
+                    <p class="player-role">Defender</p>
+                </div>
+            </div>
+
+            <div class="player-card">
+                <div class="player-number">
+                    <img src="images/zangaylay.png" alt="Abubakarr Kamara">
+                    <span class="jersey-number">5</span> 
+                </div>
+                <div class="player-info">
+                    <h3 class="player-name">Umaru Bangura (Zangaylay)</h3>
+                    <p class="player-role">Defender</p>
+                </div>
+            </div>
+
+            <div class="player-card">
+                <div class="player-number">
+                    <img src="images/alhassan koro.png" alt="Alhassan Koro">
+                    <span class="jersey-number">8</span> 
+                </div>
+                <div class="player-info">
+                    <h3 class="player-name">Alhassan Koroma</h3>
+                    <p class="player-role">Attacking-Midfielder</p>
+                </div>
+            </div>
+
+            <div class="player-card">
+                <div class="player-number">
+                    <img src="images/musa noah kamara.png" alt="">
+                    <span class="jersey-number">28</span> 
+                </div>
+                <div class="player-info">
+                    <h3 class="player-name">Musa Noah Kamara (Musa Tombo)</h3>
+                    <p class="player-role">Striker</p>
+                </div>
+            </div>
+
+            <div class="player-card">
+                <div class="player-number">
+                    <img src="images/benson.png" alt="Benson">
+                    <span class="jersey-number">14</span> 
+                </div>
+                <div class="player-info">
+                    <h3 class="player-name">Peter Benson</h3>
+                    <p class="player-role">Right-Winger</p>
+                </div>
+            </div>
+
+            <div class="player-card">
+                <div class="player-number">
+                    <img src="images/kei-kamara.png" alt="Mamoudou Jalloh">
+                    <span class="jersey-number">10</span> 
+                </div>
+                <div class="player-info">
+                    <h3 class="player-name">Kei-Kamara</h3>
+                    <p class="player-role">Striker</p>
+                </div>
+            </div>
+
+            <div class="player-card">
+                <div class="player-number">
+                    <img src="images/henry.png" alt="Player 11 Placeholder">
+                    <span class="jersey-number">3</span> 
+                </div>
+                <div class="player-info">
+                    <h3 class="player-name">Henry Okendu</h3>
+                    <p class="player-role">Left-back</p>
+                </div>
+            </div>
+
+            <div class="player-card">
+                <div class="player-number">
+                    <img src="images/Mohamed Buya Kamara.png" alt="Player 12 Placeholder">
+                    <span class="jersey-number">11</span> 
+                </div>
+                <div class="player-info">
+                    <h3 class="player-name">Mohamed Buya Kamara</h3>
+                    <p class="player-role">Striker</p>
+                </div>
+            </div>
+
+        </section>
     </main>
 
     <footer class="footer">
-        <span class="classic-2025">CLASSIC 2025</span>
+        <div class="footer-left">
+            <h2>SLFA</h2>
+            <p class="address">
+                123 Main Street, Freetown<br>
+                Sierra Leone
+            </p>
+            <div class="socials">
+                <span>IG</span>
+                <span>FB</span>
+                <span>TW</span>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div>
+                <a href="#">Home</a>
+                <a href="./players.html">Players</a>
+                <a href="./fixtures.html">Matches</a>
+            </div>
+
+            <div>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+            </div>
+
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
     </footer>
+
+    <div class="footer-bottom">
+        © 2025 Sierra Leone Football Agency. All rights reserved.
+    </div>
 
 </body>
 </html>

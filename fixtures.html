@@ -3,100 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixtures - Classic 2025</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <title>SLFA - Matches & Fixtures</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
 <body>
+<header class="topbar">
+    <a href="./index.html" class="brand">SLFA</a>
 
-    <header class="navbar">
-       <nav>
-            <a href="index.html">HOME</a>
-            <a href="fixtures.html" class="active">FIXTURES</a> <a href="./players.html">PLAYERS</a>
-            <a href="contact.html">CONTACT</a>
-        </nav>
-        </div>
-    </header>
+    <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./players.html">Players</a>
+        <a href="#">Gallery</a>
+        <a href="./fixtures.html" class="active">Matches</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </nav>
+    <input type="search" class="search" placeholder="Search…">
+</header>
 
-    <main class="content">
-        <h1>UPCOMING MATCHES</h1>
+    <main class="fixtures-container">
 
-        <div class="match-block">
-            <div class="team-container">
-                <img src="images/bo rangers.png" alt="Bo Rangers Logo" class="team-logo">
-                <span class="team-name">Bo Rangers</span>
-            </div>
+        <h1>UPCOMING LEONE ROCK PREMIER LEAGUE FIXTURES</h1>
+        
+
+        <section class="match-list">
             
-            <div class="match-details">
-                <span class="detail-label">Date of the match: <span class="detail-value">2025-12-20</span></span>
-                <span class="detail-competition">Leone Rock Premier</span>
-                <span class="detail-label">TIME: <span class="detail-value">16:00 GMT</span></span>
-                <span class="detail-label">Location: <span class="detail-value">National Stadium</span></span>
-            </div>
-
-            <div class="team-container">
-                <img src="images/Black pool.png" alt="Mighty Black Pool Logo" class="team-logo">
-                <span class="team-name">Black Pool</span>
-            </div>
-        </div>
-
-        <div class="match-block">
-            <div class="team-container">
-                <img src="images/kallon.png" alt="FC Kallon Logo" class="team-logo">
-                <span class="team-name">FC Kallon</span>
-            </div>
-            
-            <div class="match-details">
-                <span class="detail-label">Date of the match: <span class="detail-value">2025-12-27</span></span>
-                <span class="detail-competition">Leone Rock Premier</span>
-                <span class="detail-label">TIME: <span class="detail-value">18:30 GMT</span></span>
-                <span class="detail-label">Location: <span class="detail-value">Freetown Pitch</span></span>
-            </div>
-
-            <div class="team-container">
-                <img src="images/Daimond stars.png" alt="Diamond Stars Logo" class="team-logo">
-                <span class="team-name">Diamond Stars</span>
-            </div>
-        </div>
-
-        <div class="match-block">
-            <div class="team-container">
-                <img src="images/Eastern lions.png" alt="East End Lions Logo" class="team-logo">
-                <span class="team-name">EE Lions</span>
-            </div>
-            
-            <div class="match-details">
-                <span class="detail-label">Date of the match: <span class="detail-value">2026-01-05</span></span>
-                <span class="detail-competition">Leone Rock Premier</span>
-                <span class="detail-label">TIME: <span class="detail-value">15:00 GMT</span></span>
-                <span class="detail-label">Location: <span class="detail-value">Bo Stadium</span></span>
-            </div>
-
-            <div class="team-container">
-                <img src="images/port authority.png" alt="Port Authority Logo" class="team-logo">
-                <span class="team-name">Port Authority</span>
-            </div>
-        </div>
-
-       <div class="sponsors-section">
-            <p>OFFICIAL PARTNERS AND SPONSORS</p>
-            
-            <div class="sponsor-logos">
-                <img src="images/africell.png" alt="Africell Logo" class="sponsor-logo">
+            <div class="match-card">
                 
-                <img src="images/orange.png" alt="Orange Logo" class="sponsor-logo">
+                <div class="team-section left">
+                    <img src="./images/bo rangers.png" alt="Bo Rangers Logo">
+                    <p class="team-name-big">BO RANGERS</p>
+                </div>
+
+                <div class="match-details-center">
+                    <span class="matchup-vs">VS</span>
+                    <p class="league-tag">LEONE ROCK PREMIER LEAGUE</p>
+                    <div class="details-row">
+                        <div class="detail-item">Date: <strong>2025-12-20</strong></div>
+                        <div class="detail-item">Time: <strong>16:00 GMT</strong></div>
+                        <div class="detail-item">Venue: <strong>National Stadium</strong></div>
+                    </div>
+                </div>
+
+                <div class="team-section right">
+                    <img src="./images/Black pool.png" alt="Mighty Black Pool Logo">
+                    <p class="team-name-big">BLACK POOL</p>
+                </div>
+            </div>
+
+            <div class="match-card">
                 
-                <img src="images/leone rock.png" alt="Leone Rock Logo" class="sponsor-logo">
+                <div class="team-section left">
+                    <img src="./images/kallon.png" alt="FC Kallon Logo">
+                    <p class="team-name-big">FC KALLON</p>
+                </div>
+
+                <div class="match-details-center">
+                    <span class="matchup-vs">VS</span>
+                    <p class="league-tag">LEONE ROCK PREMIER LEAGUE</p>
+                    <div class="details-row">
+                        <div class="detail-item">Date: <strong>2025-12-27</strong></div>
+                        <div class="detail-item">Time: <strong>18:30 GMT</strong></div>
+                        <div class="detail-item">Venue: <strong>Freetown Pitch</strong></div>
+                    </div>
+                </div>
+
+                <div class="team-section right">
+                    <img src="./images/Daimond stars.png" alt="Diamond Stars Logo">
+                    <p class="team-name-big">DIAMOND STARS</p>
+                </div>
+            </div>
+
+            <div class="match-card">
                 
-                <img src="images/SLFA.png" alt="SLFA Logo" class="sponsor-logo">
+                <div class="team-section left">
+                    <img src="./images/Eastern lions.png" alt="East End Lions F.C. Logo">
+                    <p class="team-name-big">EE LIONS</p>
+                </div>
+
+                <div class="match-details-center">
+                    <span class="matchup-vs">VS</span>
+                    <p class="league-tag">LEONE ROCK PREMIER LEAGUE</p>
+                    <div class="details-row">
+                        <div class="detail-item">Date: <strong>2026-01-05</strong></div>
+                        <div class="detail-item">Time: <strong>15:00 GMT</strong></div>
+                        <div class="detail-item">Venue: <strong>Bo Stadium</strong></div>
+                    </div>
+                </div>
+
+                <div class="team-section right">
+                    <img src="./images/port authority.png" alt="Port Authority Logo">
+                    <p class="team-name-big">PORT AUTHORITY</p>
+                </div>
             </div>
             
-        </div>
+        </section>
 
+        <section class="sponsors-section">
+            <h2 class="sponsors-title">Official Partners and Sponsors</h2>
+            <div class="sponsors-logos">
+                <div class="sponsor-logo">
+                    <img src="./images/africell.png" alt="Africell Logo">
+                </div>
+                <div class="sponsor-logo">
+                    <img src="./images/orange.png" alt="Orange Logo">
+                </div>
+                <div class="sponsor-logo">
+                    <img src="./images/leone rock.png" alt="Leone Rock Logo">
+                </div>
+                <div class="sponsor-logo">
+                     <img src="./images/SLFA badge.png" alt="Leone Rock Logo">
+                </div> 
+            </div>
+        </section>
+        
     </main>
 
     <footer class="footer">
-        <span class="classic-2025">CLASSIC 2025</span>
+        <div class="footer-left">
+            <h2>SLFA</h2>
+            <p class="address">
+                123 Main Street, Freetown<br>
+                Sierra Leone
+            </p>
+            <div class="socials">
+                <span>IG</span>
+                <span>FB</span>
+                <span>TW</span>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div>
+                <a href="./index.html">Home</a>
+                <a href="./players.html">Players</a>
+                <a href="./fixtures.html">Matches</a>
+            </div>
+
+            <div>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+            </div>
+
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
     </footer>
+
+    <div class="footer-bottom">
+        © 2025 Sierra Leone Football Agency. All rights reserved.
+    </div>
 
 </body>
 </html>
